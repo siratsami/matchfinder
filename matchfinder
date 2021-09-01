@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo ""
+echo " Find matches with httpx by B4GG3R"
+echo " Usage: matchfinder urls.txt 'stringtofind'"
+echo ""
+
+for file in $(cat $1); do cat $file | httpx -silent -match-regex $2 ; done
