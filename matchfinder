@@ -6,3 +6,6 @@ echo " Usage: matchfinder urls.txt 'stringtofind'"
 echo ""
 
 cat $1 | httpx -silent -match-regex $2
+
+# For automating to multiple url list use this command:
+# for a in $(ls | sort -u); do matchfinder $a 'stringtofind' ; done
